@@ -5,7 +5,7 @@ router = APIRouter()
 
 @router.get("/")
 def read_root():
-    return {"message": "Hello from FastAPI backend!"}
+    return {"message": "Hello from Backend!"}
 
 @router.post("/items/")
 def create_item(item: Item):
