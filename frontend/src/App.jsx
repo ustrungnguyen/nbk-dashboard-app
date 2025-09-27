@@ -1,27 +1,39 @@
 // Importing Libraries
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
-import { useState, useEffect } from 'react';
 
 // Importing Pages
-import Home from './pages/Home/Home';
-import Dashboard from './pages/Dashboard/Dashboard';
-import Form from './pages/Form/Form';
+import Home from './pages/Home/Home.jsx';
+import Dashboard from './pages/Dashboard/Dashboard.jsx';
+import Form from './pages/Form/Form.jsx';
+
+
+// Importing Components
+import Header from './components/Header/Header.jsx';
+import Footer from './components/Footer/Footer.jsx';
 
 // Importing CSS
 import './App.css';
 
 export default function App() {
-
   return (
     <>
       <div className="App">
-        <Router>
-          <Routes>
-            <Route path='/' element={<Home />} />
-            <Route path='/dashboard' element={<Dashboard />} />
-            <Route path='/form' element={<Form />} />
-          </Routes>
-        </Router>
+        {/* Header */}
+        <Header />
+
+        {/* Routers */}
+        <main>
+          <Router>
+            <Routes>
+              <Route path='/' element={<Home />} />
+              <Route path='/form' element={<Form />} />
+              <Route path='/dashboard' element={<Dashboard />} />
+            </Routes>
+          </Router>
+        </main>
+
+        {/* Footer */}
+        <Footer />
       </div>
     </>
   )
