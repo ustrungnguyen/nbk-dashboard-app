@@ -1,3 +1,32 @@
 https://horizon-ui.com/horizon-tailwind-react/admin/default
 https://demos.creative-tim.com/vision-ui-dashboard-pro-react/?_ga=2.183248358.1949969980.1758694944-2024651352.1758694944#/dashboards/default
 https://dribbble.com/shots/23902428-Stakent-Crypto-Dashboard
+
+------------------------------------------------------------------
+|                                                                |
+|  Phân tích & Dự đoán Kết quả học tập                           |
+|  Nhập điểm trung bình 3 học kỳ gần nhất của 4 môn học...        |
+|                                                                |
+|  +----------------------------------------------------------+  |
+|  | MÔ                                         |  |
+|  |                                                          |  |
+|  | Tên môn học                                              |  |
+|  | [ Input: ví dụ "Toán cao cấp A1" ]                       |  |
+|  |                                                          |  |
+|  | Điểm học kỳ 1      ĐN HỌC 1       Điểm học kỳ 2      Điểm học kỳ 3      |  |
+|  | [ Input ]          [ Input ]          [ Input ]          |  |
+|  +----------------------------------------------------------+  |
+|                                                                |
+|  +----------------------------------------------------------+  |
+|  | MÔN HỌC 2                                                |  |
+|  | [ Tương tự như trên... ]                                 |  |
+|  +----------------------------------------------------------+  |
+|                                                                |
+|  ... (Card cho môn 3 và 4)                                     |
+|                                                                |
+|  Mô tả thêm về quá trình học tập của bạn                       |
+|  [ Textarea cho phần mô tả dài... ]                             |
+|                                                                |
+|  [            Phân tích & Dự đoán (Button)            ]       |
+|                                                                |
+------------------------------------------------------------------
