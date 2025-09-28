@@ -1,3 +1,4 @@
+/* Global Styles Set Up */
 body {
   font-family: Arial, sans-serif;
   background: linear-gradient(to bottom, #0a0a0f, #12121a 40%, #0e0e0e 100%);
@@ -19,13 +20,15 @@ p {
   margin: 0;
 }
 
+/* Responsive Layout */
 .home-container {
   width: 100%;
   max-width: 1600px;
   margin: 0 auto;
-  padding: 40px;
+  padding: 20px;
 }
 
+/* Grid background */
 .grid-background {
   position: absolute;
   top: 0;
@@ -41,7 +44,46 @@ p {
   z-index: 0;
 }
 
-.content {
-  z-index: 1;
+/* Welcome text */
+.welcome-content-text {
+  z-index: 2;
   position: relative;
+  margin-bottom: 300px;
+}
+
+.welcome-content-text h1 {
+    margin-bottom: 20px;
+}
+
+/* Welcome animation image */
+.welcome-image-container {
+    position: relative;
+    z-index: 2;
+    border-radius: 8px;
+    border: 1px solid white;
+    object-fit: cover;
+    animation: rotateScale 1s ease-in-out;
+    animation-timeline: view();
+    animation-range: entry 20%;
+    height: 100vh;
+}
+
+.welcome-image {
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid white;
+    animation: rotateScale 1s ease-in-out;
+    animation-timeline: view();
+    animation-range: entry 20%;
+    width: calc(100% - 10%);
+    height: 100vh;
+}
+
+@keyframes rotateScale {
+    from {
+        transform: perspective(1000px) rotateX(40deg) scale(1)
+    }
+    to {
+        transform: perspective(1000px) rotateX(0deg) scale(1);
+    }
 }
