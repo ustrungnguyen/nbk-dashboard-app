@@ -1,0 +1,50 @@
+.features-badge-animation {
+    animation: fadeInDown 1s ease-in-out;
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.welcome-title-animation {
+    animation: fadeInBlur 1s ease-in-out;
+    filter: blur(0);
+    opacity: 1;
+}
+
+.welcome-subtitle-animation {
+    animation: fadeInUp 700ms ease-out forwards;
+    animation-delay: 500ms;
+    opacity: 0;
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        transform: translateY(-80px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInBlur {
+    from {
+        filter: blur(10px);
+        opacity: 0;
+    }
+    to {
+        filter: blur(0);
+        opacity: 1;
+    }
+}
