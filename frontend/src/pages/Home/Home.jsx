@@ -1,6 +1,5 @@
 // Importing React
 import React from 'react';
-import { useEffect, useRef } from 'react';
 
 // Importing Images
 import WelcomeImage from '../../assets/Home/react.png';
@@ -35,6 +34,8 @@ export default function Home() {
 
                     {/* Animation image */}
                     <img src={WelcomeImage} alt="Welcome" className='hero-image hero-image-animation' />
+
+                    <div className='gradient-black-background'></div>
                 </section>
 
                 {/* Dashboard Overview Section */}
@@ -49,7 +50,7 @@ export default function Home() {
                         </div>
 
                         {/* Dashboard overview title */}
-                        <h2 className='dashboard-overview-title'>Tổng quan về Dashboard</h2>
+                        <h1 className='dashboard-overview-title'>Tổng quan sản phẩm</h1>
                     </div>
 
                     {/* Dashboard overview content */}
