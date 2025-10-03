@@ -31,6 +31,7 @@ p {
 /* Grid background */
 .grid-background {
   position: absolute;
+  z-index: 1;
   top: 0;
   left: 0;
   width: 100%;
@@ -66,7 +67,7 @@ p {
 .features-badge {
   max-width: 320px;
   width: auto;
-  z-index: 2;
+  z-index: 3;
   border-radius: 4px;
   border: none;
   outline: none;
@@ -82,7 +83,7 @@ p {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  z-index: 2;
+  z-index: 3;
   position: relative;
   margin-bottom: 70px;
 }
@@ -106,7 +107,7 @@ p {
 /* Animation Image */
 .hero-image {
   position: relative;
-  z-index: 2;
+  z-index: 3;
   display: block;
   object-fit: fill;
   border-radius: 10px;
@@ -138,7 +139,7 @@ p {
   left: 0;
   width: 100%;
   height: 200px;
-  z-index: 2;
+  z-index: 3;
   background: linear-gradient(
     to top,
     rgb(0, 0, 0) 0%,
@@ -149,15 +150,26 @@ p {
 /* Dashboard Overview Section */
 .dashboard-overview-section {
   position: relative;
-  z-index: 2;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
   background-color: black;
+  padding-top: 40px;
+}
+
+.dashboard-overview-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  justify-content: center;
-  align-items: flex-start;
-  border-top: 2px solid rgba(26, 24, 51, 1);
-  padding: 200px 50px 200px 50px;
-  margin: 0;
+  column-gap: 20px;
+  max-height: 250px;
+  width: calc(100% - 10%);
+  height: 200px;
 }
 
 .dashboard-overview-heading {
@@ -172,7 +184,7 @@ p {
 .dashboard-overview-badge {
   max-width: 320px;
   width: auto;
-  z-index: 2;
+  z-index: 3;
   border-radius: 4px;
   border: 0.2px solid rgba(26, 24, 51, 1);
   outline: none;
@@ -199,6 +211,155 @@ p {
 }
 
 .dashboard-overview-content p {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: grey;
+  text-align: left;
+}
+
+/* Dashboard Features Section */
+.dashboard-features-section {
+  position: relative;
+  z-index: 3;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 100px 50px;
+  margin: 0 auto;
+}
+
+.dashboard-features-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  column-gap: 20px;
+  width: calc(100% - 10%);
+  height: calc(100% - 10%);
+  border: 1px solid rgba(27, 24, 51, 1);
+  border-radius: 10px;
+}
+
+.dashboard-features-heading-grid {
+  display: grid;
+  grid-template-rows: 500px 150px;
+  border-right: 1px solid rgba(27, 24, 51, 1);
+}
+
+.dashboard-features-heading-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.dashboard-features-heading-container h1 {
+  font-size: 2.5rem;
+  max-width: 380px;
+  width: auto;
+  margin: 20px 20px;
+}
+
+.dashboard-features-image-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.dashboard-features-content-container {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-top: 1px solid rgba(27, 24, 51, 1);
+  padding: 20px;
+}
+
+.dashboard-features-content-container p {
+  font-size: 1rem;
+  color: grey;
+  max-width: 550px;
+  width: auto;
+}
+
+.dashboard-features-image-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding: 100px 0px 0px 100px;
+}
+
+.dashboard-features-image-container img {
+  object-fit: cover;
+  width: 800px;
+  height: 600px;
+  border-radius: 8px;
+  border-top: 1px solid grey;
+  border-left: 1px solid grey;
+}
+
+/* Updates summary section */
+.updates-summary-section {
+  position: relative;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  background-color: black;
+  padding-top: 40px;
+}
+
+.updates-summary-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 20px;
+  max-height: 250px;
+  width: calc(100% - 10%);
+  height: 200px;
+}
+
+.updates-heading-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: left;
+  height: 100%;
+}
+
+.updates-badge {
+  max-width: 80px;
+  width: auto;
+  z-index: 3;
+  border-radius: 4px;
+  border: 0.2px solid rgba(26, 24, 51, 1);
+  outline: none;
+  background: transparent;
+  color: rgba(130, 118, 235, 1);
+  padding: 2px 10px;
+  margin-bottom: 40px;
+}
+
+.updates-heading-container h1 {
+  font-size: 2.5rem;
+}
+
+.updates-caption-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  max-height: 150px;
+  height: 100%;
+}
+
+.updates-caption-container div {
+  font-size: 1.2rem;
+  color: grey;
+  text-align: left;
 }
