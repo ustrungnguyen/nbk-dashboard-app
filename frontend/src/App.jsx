@@ -17,24 +17,24 @@ import './App.css';
 export default function App() {
   return (
     <>
-      <div className="App">
-        {/* Header */}
-        <Header />
+      <Router>
+        <div className="App">
+          {/* Header */}
+          <Header />
 
-        {/* Routers */}
-        <main>
-          <Router>
-            <Routes>
-              <Route path='/' element={<Home />} />
-              <Route path='/form' element={<Form />} />
-              <Route path='/dashboard' element={<Dashboard />} />
-            </Routes>
-          </Router>
-        </main>
+          {/* Routers */}
+          <main>
+              <Routes>
+                <Route path='/' element={<Home />} />
+                <Route path='/form' element={<Form />} />
+                <Route path='/dashboard' element={<Dashboard />} />
+              </Routes>
+          </main>
 
-        {/* Footer */}
-        <Footer />
-      </div>
+          {/* Footer */}
+          <Footer />
+        </div>
+      </Router>
     </>
   )
 }
