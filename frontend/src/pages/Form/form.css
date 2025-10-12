@@ -60,8 +60,8 @@ p {
         rgba(19, 17, 37, 1) 60%,
         rgba(4, 4, 7, 1) 100%
     );
-    animation: rotate-gradient 3s ease-in-out forwards; 
-    padding: 20px;
+    animation: rotate-gradient 2.8s ease-in-out forwards; 
+    padding: 20px 50px;
     margin-top: 100px;
 }
 
@@ -69,12 +69,14 @@ p {
     display: grid;
     grid-template-columns: 1fr;
     justify-content: flex-start;
+    align-items: center;
     width: 100%;
     height: auto;
     margin-top: 40px;
 }
 
 .form_card_group {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -82,6 +84,82 @@ p {
     text-align: center;
     padding: 0;
     margin: 0;
+}
+
+.form_card_group::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -110px;
+    width: 2px;
+    height: 85%;
+    background-color: rgba(106, 106, 164, 1);
+    animation: loadDown 1s ease-in-out forwards;
+}
+
+@keyframes loadDown {
+    from {
+        height: 0;
+    }
+    to {
+        height: 85%;
+    }
+}
+
+.form_card_group:nth-child(1):after {
+    content: 'Phần 1';
+    position: absolute;
+    top: 50%;
+    left: -170px;
+    opacity: 0;
+    transform: rotate(-90deg) translateX(50%);
+    animation: loadRight 800ms ease-in-out forwards;
+}
+
+.form_card_group:nth-child(2):after {
+    content: 'Phần 2';
+    position: absolute;
+    top: 50%;
+    left: -170px;
+    opacity: 0;
+    transform: rotate(-90deg) translateX(50%);
+    animation: loadRight 800ms ease-in-out forwards;
+    animation-delay: 300ms;
+}
+
+.form_card_group:nth-child(3):after {
+    content: 'Phần 3';
+    position: absolute;
+    top: 50%;
+    left: -170px;
+    opacity: 0;
+    transform: rotate(-90deg) translateX(50%);
+    animation: loadRight 800ms ease-in-out forwards;
+    animation-delay: 600ms;
+}
+
+.form_card_group:nth-child(4):after {
+    content: 'Phần 4';
+    position: absolute;
+    top: 50%;
+    left: -170px;
+    opacity: 0;
+    transform: rotate(-90deg) translateX(50%);
+    animation: loadRight 800ms ease-in-out forwards;
+    animation-delay: 800ms;
+}
+
+@keyframes loadRight {
+    from {
+        opacity: 0;
+        transform: translate(50%, 100px);
+        rotate: -90deg;
+    }
+    to {
+        opacity: 1;
+        transform: translate(50%, 0);
+        rotate: -90deg;
+    }
 }
 
 .form_subject_card {
@@ -167,4 +245,62 @@ p {
     background: transparent;
     padding: 0;
     margin: 0;
+}
+
+.form_description_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: left;
+    width: 1000px;
+    padding: 0;
+    margin-bottom: 40px;
+}
+
+@media (max-width: 1050px) {
+    .form_description_container {
+        width: 100%;
+    }
+}
+
+.form_description_label {
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.form_description_textarea {
+    border-radius: 8px;
+    border: 1px solid rgba(106, 106, 164, 1);
+    outline: none;
+    background: transparent;
+    color: white;
+    font-size: 0.9rem;
+    width: 100%;
+    resize: none;
+    padding: 10px;
+    margin: 0;
+}
+
+.form_description_textarea::placeholder {
+    color: #888;
+}
+
+.form_submit_button {
+    width: auto;
+    z-index: 3;
+    border-radius: 10px;
+    border: 1px solid rgba(106, 106, 164, 1);
+    outline: none;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    padding: 10px 0px;
+}
+
+.form_submit_button:hover {
+    background-color: rgba(106, 106, 164, 1);
+    transition: 500ms;
 }

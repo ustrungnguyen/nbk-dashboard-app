@@ -60,6 +60,7 @@ p {
     text-align: center;
     width: 20%;
     height: 100%;
+    cursor: pointer;
     padding: 0 10px;
     margin: 0;
 }

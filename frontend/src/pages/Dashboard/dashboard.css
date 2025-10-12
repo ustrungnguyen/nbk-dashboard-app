@@ -1,0 +1,159 @@
+body {
+    position: relative;
+    z-index: 1;
+    padding: 0;
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    padding: 0;
+    margin: 0;
+}
+
+p {
+    padding: 0;
+    margin: 0;
+}
+
+.section_label {
+    color: grey;
+}
+
+/* .long_section_label {
+    font-size: 0.7rem;
+} */
+
+.subject_status_icon,
+.process_status_icon,
+.graduation_possibility_icon {
+    font-size: 2.5em;
+    color: white;
+}
+
+
+.loading, .error_message, .no_data_message {
+    font-size: 1.1rem;
+    color: white;
+    margin-top: 50%;
+}
+
+.dashboard {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 100px;
+}
+
+.dashboard_container {
+    width: 100%;
+    max-width: 2500px;
+}
+
+.subjects_status_container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    align-items: center;
+    column-gap: 40px;
+}
+
+.subject_status_card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px;
+    max-width: 255px;
+    max-height: 75px;
+    width: 250px;
+    height: 70px;
+    border: 1px solid rgba(106, 106, 164, 1);
+    background: linear-gradient(
+        135deg,
+        rgba(4, 4, 7, 1) 0%,
+        rgba(4, 4, 7, 1) 40%,
+        rgba(4, 4, 7, 1) 60%,
+        rgba(19, 17, 37, 1) 85%,
+        rgba(4, 4, 7, 1) 100%
+    );
+    padding: 10px 20px;
+}
+
+.subject_status_details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    row-gap: 10px;
+    padding-right: 100px;
+}
+
+.overall_progress_container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    column-gap: 40px;
+}
+
+.overall_progress_left {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    row-gap: 20px;
+}
+
+.process_prediction_container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    column-gap: 40px;
+    margin-top: 50px;
+}
+
+.process_status_container,
+.graduation_possibility_container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px;
+    max-width: 255px;
+    max-height: 75px;
+    width: 250px;
+    height: 70px;
+    border: 1px solid rgba(106, 106, 164, 1);
+    background: linear-gradient(
+        135deg,
+        rgba(4, 4, 7, 1) 0%,
+        rgba(4, 4, 7, 1) 40%,
+        rgba(4, 4, 7, 1) 60%,
+        rgba(19, 17, 37, 1) 85%,
+        rgba(4, 4, 7, 1) 100%
+    );
+    padding: 10px 20px;
+}
+
+.process_status_details_container,
+.graduation_possibility_details_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    row-gap: 10px;
+}
+
+.process_status_icon_container,
+.graduation_possibility_icon_container {
+    display: flex;
+    justify-content: flex-end;
+}

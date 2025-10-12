@@ -1,6 +1,9 @@
 from pydantic import BaseModel
+from typing import List
 
-class Item(BaseModel):
-    id: int
+class Subject(BaseModel):
     name: str
-    description: str | None = None
+    scores: List[float]
+    
+class AnalysisRequest(BaseModel):
+    subjects: List[Subject]

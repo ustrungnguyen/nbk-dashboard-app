@@ -11,9 +11,9 @@ export default function Header() {
   return (
     <header className='header header_animation'>
         {/* Logo container */}
-        <div className='header_logo_container'>
+        <Link to="/" className='header_logo_container'>
           <h1 className='header_logo'>Dashboard</h1>            
-        </div>
+        </Link>
 
         {/* Nav Links container */}
         <div className='header_nav_links_container'>
