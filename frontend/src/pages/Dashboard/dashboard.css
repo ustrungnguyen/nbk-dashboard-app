@@ -20,13 +20,10 @@ p {
     margin: 0;
 }
 
+/* Conditional Sytles */
 .section_label {
     color: grey;
 }
-
-/* .long_section_label {
-    font-size: 0.7rem;
-} */
 
 .subject_status_icon,
 .process_status_icon,
@@ -42,6 +39,19 @@ p {
     margin-top: 50%;
 }
 
+.green_safe_icon {
+    color: green;
+}
+
+.yellow_caution_icon {
+    color: darkgoldenrod;
+}
+
+.red_dangerous_icon {
+    color: red;
+}
+
+/* Main Styles */
 .dashboard {
     width: 100%;
     box-sizing: border-box;
@@ -72,8 +82,8 @@ p {
     border-radius: 8px;
     max-width: 255px;
     max-height: 75px;
-    width: 250px;
-    height: 70px;
+    width: 100%;
+    height: 100%;
     border: 1px solid rgba(106, 106, 164, 1);
     background: linear-gradient(
         135deg,
@@ -99,15 +109,17 @@ p {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     column-gap: 40px;
+    margin-top: 50px;
 }
 
 .overall_progress_left {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
     justify-content: flex-start;
     align-items: center;
+    max-width: 100%;
     row-gap: 20px;
 }
 
@@ -156,4 +168,85 @@ p {
 .graduation_possibility_icon_container {
     display: flex;
     justify-content: flex-end;
+}
+
+.overall_progress_right {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: flex-start;
+    align-items: center, stretch;
+    row-gap: 20px;
+}
+
+.subjects_average_score_container {
+    width: 100%;
+}
+
+.subject_average_score_bar {
+    display: block;
+    max-width: 100%;
+    max-height: 315px;
+    width: 100%;
+    height: 100%;
+}
+
+.subject_average_score_bar canvas {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+}
+
+.line_chart_container {
+    max-width: 100%;
+    width: 100%;
+    display: block;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.line_chart_container h2 {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 30px;
+}
+
+.line_chart_container canvas {
+    max-width: 100%;
+    max-height: 315px;
+    width: auto;
+    height: auto;
+    margin-top: 20px;
+}
+
+.graduation_percentage_container {
+    z-index: 2;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.graduation_percentage_container h2 {
+    margin: 10px 0px;
+    margin-bottom: 30px;
+    padding: 0;
+}
+
+.graduation_percentage_chart_container {
+    display: block;
+    max-width: 100%;
+    max-height: 315px;
+    width: 100%;
+    height: 100%;
+}
+
+.graduation_percentage_chart canvas {
+    z-index: 2;
+    max-width: 100%;
+    max-height: 315px;
+    width: auto;
+    height: auto;
 }

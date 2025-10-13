@@ -72,6 +72,7 @@ async def analyze_scores(request: AnalysisRequest):
         
         subject_results.append({
             "subject_name": subject.name,
+            "original_scores": subject.scores,
             "predicted_score": average_score,
             "status": status
         })
