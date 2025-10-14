@@ -175,6 +175,7 @@ export default function Dashboard() {
                                 }}
 
                                 options={{
+                                    animation: true,
                                     responsive: true,
                                     plugins: {
                                         legend: {
