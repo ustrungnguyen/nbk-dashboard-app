@@ -28,6 +28,49 @@ export default function Dashboard() {
 
     const { subject_analysis, overall_status, graduation_possibility } = analysisData;
 
+    const barData = {
+        labels: subject_analysis.map((data) => data.subject_name),
+        datasets: [
+                {
+                label: "Điểm Trung Bình Các Môn Học",
+                data: subject_analysis.map((data) => data.predicted_score),
+                backgroundColor: subject_analysis.map(() => "rgba(106,106,164,1)"),
+                borderRadius: 5,
+                borderWidth: 1,
+                },
+            ],
+        };
+
+        const barOptions = {
+        responsive: true,
+        maintainAspectRatio: false,
+        animation: {
+            duration: 900,
+            easing: 'easeOutQuart',
+        },
+        plugins: {
+            legend: { display: false },
+            title: {
+            display: true,
+            text: 'Điểm Trung Bình Các Môn Học',
+            color: 'white',
+            font: { size: 16 },
+            },
+        },
+        scales: {
+            y: {
+            beginAtZero: true,
+            max: 10,
+            ticks: { color: 'white' },
+            grid: { color: 'rgba(255,255,255,0.1)' },
+            },
+            x: {
+            ticks: { color: 'white' },
+            grid: { color: 'rgba(255,255,255,0.1)' },
+            },
+        },
+    };
+
     const lineChartData = {
         labels: ['Giữa kỳ 1', 'Cuối kỳ 1', 'Giữa kỳ 2', 'Dự đoán cuối kỳ 2'],
 
@@ -46,11 +89,10 @@ export default function Dashboard() {
 
     const percentageValue = parseInt(graduation_possibility.replace('%', ''));
     
-    // Chuẩn bị dữ liệu cho biểu đồ
     const doughnutChartData = {
         datasets: [
             {
-                data: [percentageValue, 100 - percentageValue], // [Phần đạt, Phần còn lại]
+                data: [percentageValue, 100 - percentageValue],
                 backgroundColor: ['#4ade80', 'rgba(255, 255, 255, 0.1)'],
                 borderColor: ['#4ade80', 'rgba(255, 255, 255, 0.2)'],
                 borderWidth: 1,
@@ -58,7 +100,6 @@ export default function Dashboard() {
         ],
     };
 
-    // Tùy chọn hiển thị
     const doughnutChartOptions = {
         responsive: true,
         maintainAspectRatio: false,
@@ -66,6 +107,8 @@ export default function Dashboard() {
         plugins: {
             legend: { display: false },
             tooltip: { enabled: false },
+
+            
         },
     };
 
@@ -155,63 +198,11 @@ export default function Dashboard() {
                     <div className='overall_progress_right'>
                         {/* Subjects average scores container */}
                         <div className='subjects_average_score_container'>
-                            <Bar className='subject_average_score_bar'
-                                data={{
-                                    labels: subject_analysis.map((data) => data.subject_name),
-                                    datasets: [
-                                        {
-                                            label: "Tỉ lệ đỗ tốt nghiệp THPT",
-                                            data: subject_analysis.map((data) => data.predicted_score),
-                                            backgroundColor: [
-                                                "rgba(106, 106, 164, 1)",
-                                                "rgba(106, 106, 164, 1)",
-                                                "rgba(106, 106, 164, 1)",
-                                                "rgba(106, 106, 164, 1)"
-                                            ],
-                                            borderRadius: 5,
-                                            borderWidth: 1
-                                        },
-                                    ],
-                                }}
-
-                                options={{
-                                    animation: true,
-                                    responsive: true,
-                                    plugins: {
-                                        legend: {
-                                            display: false
-                                        },
-                                        title: {
-                                            display: true,
-                                            text: 'Điểm Trung Bình Các Môn Học',
-                                            color: 'white',
-                                            font: {
-                                                size: 16
-                                            }
-                                        }
-                                    },
-                                    scales: {
-                                        y: {
-                                            beginAtZero: true,
-                                            max: 10,
-                                            ticks: {
-                                                color: 'white'
-                                            },
-                                            grid: {
-                                                color: 'rgba(255, 255, 255, 0.1)'
-                                            }
-                                        },
-                                        x: {
-                                            ticks: {
-                                                color: 'white'
-                                            },
-                                            grid: {
-                                                color: 'rgba(255, 255, 255, 0.1)'
-                                            }
-                                        }
-                                    }
-                                }}
-                            />
+                            <div className='subject_bar_chart_container'>
+                                <Bar className='subject_average_score_bar'
+                                    data={barData} options={barOptions}
+                                />
+                            </div>
                         </div>
 
                         {/* Graduation percentage container */}

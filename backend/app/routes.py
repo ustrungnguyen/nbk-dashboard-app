@@ -36,7 +36,7 @@ def calculate_graduation_possibility(all_original_scores: List[float], all_avera
     if is_all_safe:
         target_score = 8.0
     else:
-        target_score = 6.0
+        target_score = 6.5
 
     if max_score == min_score:
         return "100%" if max_score >= target_score else "0%"
