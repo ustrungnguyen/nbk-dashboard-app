@@ -24,7 +24,7 @@ dist-ssr
 *.sw?
 
 venv/
-Lib/
+Lib/site-packages
 __pycache__/
 
 ._*
