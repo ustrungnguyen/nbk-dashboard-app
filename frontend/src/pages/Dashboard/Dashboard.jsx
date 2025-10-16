@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import {useLocation, Navigate} from 'react-router-dom';
 import cn from 'classnames';
 import { Chart as ChartJS, CategoryScale, ArcElement, LinearScale, PointElement, LineElement, BarElement, Title, Tooltip, Legend } from 'chart.js';
 import {Bar, Line, Doughnut} from 'react-chartjs-2';
+import ReactMarkdown from 'react-markdown';
+
+// Importing Components & Custom Hooks
+import LoadingAI from '../../components/Loading/Loading.jsx';
 
 // Importing CSS
 import './dashboard.css';
@@ -19,11 +23,47 @@ const lineChartColors = [
 export default function Dashboard() {
 
     const location = useLocation();
-
     const analysisData = location.state?.results;
+
+    const [isLoadingPage, setIsLoadingPage] = useState(true);
+    const [displayedText, setDisplayedText] = useState("");
+    const [cursorVisible, setCursorVisible] = useState(true);
+
+    useEffect(() => {
+        const timer = setTimeout(() => setIsLoadingPage(false), 5000);
+        return () => clearTimeout(timer);
+    }, []);
+
+    useEffect(() => {
+        if (!analysisData?.ai_analysis) {
+            setDisplayedText("");
+            return;
+        }
+
+        let i = 0;
+        const text = analysisData.ai_analysis;
+        const typing = setInterval(() => {
+            if (i < text.length) {
+                setDisplayedText(text.slice(0, i + 1));
+                i++;
+            } else clearInterval(typing);
+        }, 20);
+
+        const blink = setInterval(() => setCursorVisible(prev => !prev), 500);
+
+        return () => {
+            clearInterval(typing);
+            clearInterval(blink);
+        };
+    }, [analysisData]);
 
     if (!analysisData) {
         return <Navigate to="/form" />;
+    }
+
+    
+    if (isLoadingPage) {
+        return <LoadingAI />;
     }
 
     const { subject_analysis, overall_status, graduation_possibility } = analysisData;
@@ -218,8 +258,15 @@ export default function Dashboard() {
                 </div>
                 
                 {/* Study roadmap suggestion container  */}
-                <div className='study_roadmap_suggestion_container'>
+                <div className='study_suggestion_container'>
+                    <h1 className='study_suggestion_heading'>
+                        Phân tích và gợi ý lộ trình học tập bởi AI
+                    </h1>
 
+                    <div className='ai_analysis_content ai_loading_effect'>
+                        <ReactMarkdown>{displayedText}</ReactMarkdown>
+                        <span className={`typing_cursor ${cursorVisible ? "visible" : ""}`}>|</span>
+                    </div>
                 </div>
             </div>
         </div>

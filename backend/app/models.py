@@ -7,3 +7,4 @@ class Subject(BaseModel):
     
 class AnalysisRequest(BaseModel):
     subjects: List[Subject]
+    description: str

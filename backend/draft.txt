@@ -1,7 +1,13 @@
+==============================
+Templates
+==============================
 https://horizon-ui.com/horizon-tailwind-react/admin/default
 https://demos.creative-tim.com/vision-ui-dashboard-pro-react/?_ga=2.183248358.1949969980.1758694944-2024651352.1758694944#/dashboards/default
 https://dribbble.com/shots/23902428-Stakent-Crypto-Dashboard
 
+==============================
+Sample Form
+==============================
 -----------------------------------------------------------------------------
 |                                                                           |
 |  Phân tích & Dự đoán Kết quả học tập                                      |
@@ -24,216 +30,64 @@ https://dribbble.com/shots/23902428-Stakent-Crypto-Dashboard
 |                                                                           |
 |  ... (Card cho môn 3 và 4)                                                |
 |                                                                           |
-|  Mô tả thêm về quá trình học tập của bạn                                  |
+|  Mô tả thêm về quá trình học tập                                          |
 |  [ Textarea cho phần mô tả dài... ]                                       |
 |                                                                           |
-|  [            Phân tích & Dự đoán (Button)            ]                   |
+|  [                     Phân tích & Dự đoán (Button)                    ]  |
 |                                                                           |
 -----------------------------------------------------------------------------
 
-New packages required: classnames, axios, chart.js, react-chartjs-2
+==============================
+History Sample Data (JSON)
+==============================
+{
+  "subjects": [
+    {
+      "name": "Toán",
+      "scores": [
+        9.0,
+        8.5,
+        9.5
+      ]
+    },
+    {
+      "name": "Văn",
+      "scores": [
+        7.25,
+        8.0,
+        8.75
+      ]
+    },
+    {
+      "name": "Tiếng Anh",
+      "scores": [
+        6.0,
+        5.5,
+        6.5
+      ]
+    },
+    {
+      "name": "Lịch Sử",
+      "scores": [
+        2.0,
+        3.25,
+        4.0
+      ]
+    }
+  ],
+  "description": "
+        Trong thời gian vừa qua, tôi cảm thấy khá tự tin với các môn tính toán và phân tích như Toán và Văn. Tôi có thể nắm bắt logic và áp dụng vào bài tập khá tốt. Tuy nhiên, với môn Tiếng Anh, tôi gặp một chút khó khăn về từ vựng và các cấu trúc ngữ pháp phức tạp, đặc biệt là với kĩ năng nói, tôi rất kém ở kĩ năng nói bởi ít khi có cơ hội giao tiếp bằng Tiếng Anh và cũng thiếu chủ động trong việc tìm ra giải pháp hợp lí, 1 tuần tôi đi học thêm 2 buổi Tiếng Anh, nhưng mỗi buổi học thêm đó tôi chỉ có thể nói khoảng 1 tiếng do cần phải học những kỹ năng khác, nên thời gian tôi dành cho việc luyện tập Speaking rất ít. Riêng môn Lịch Sử là môn tôi yếu nhất, tôi thực sự chật vật trong việc ghi nhớ các mốc thời gian và sự kiện, đặc biệt là trong chương trình học của tôi yêu cầu ghi nhớ rất nhiều sự kiện và các mốc thời gian của nhiều quốc gia khác nhau ví dụ như chiến tranh lạnh giữa Hoa Kỳ và Liên Xô. Cùng với đó thì tôi cũng có một điểm yếu rất nặng trong việc học thuộc lòng, tôi có thể dễ dàng xử lý logic của các bài toán nhưng thật sự không thể nào học thuộc lòng nổi 1 sự kiện lịch sử nào, dẫn đến kết quả không được như mong đợi, ngược lại điểm số môn Lịch Sử của tôi còn ở mức được cảnh báo rằng có thể trượt tốt nghiệp khiến tôi rất lo lắng.
+    "
+}
 
-<div className='form'>
-                {/* Form Title */}
-                <div className='form_title_container'>
-                    <h1 className='form_title'>Điền điểm số và môn học đăng ký thi tốt nghiệp THPT</h1>
-                </div>
-
-                <form className='form_container'>
-                    {/* Card Group */}
-                    <div className='form_card_group'>
-
-                        {/* Subject 1 card */}
-                        <div className='form_subject_card'>
-                            <div className='subject_card_title'>Môn học 1</div>
-                            <label for="subject1" className='form_subject_label'>Tên môn học:</label>
-                            <input 
-                                type='text' 
-                                id='subject1' 
-                                className='form_subject_input' 
-                                placeholder='Toán'
-                                required />
-                        </div>
-
-                        {/* Subject 1 scores container */}
-                        <div className='form_score_inputs_container'>
-                            {/* Half Semester 1 */}
-                            <div className='score_input_card'>
-                                <label for="halfsem1_subject1" className='form_score_subject_label'>Giữa Học Kỳ 1</label>
-                                <input 
-                                    type='text' 
-                                    id='=halfsem1_subject1' 
-                                    className='form_score_subject_input' 
-                                    placeholder='9'
-                                    required />
-                            </div>
-
-                            {/* End Semester 1 */}
-                            <div className='score_input_card'>
-                                <label for="sem1_subject1" className='form_score_subject_label'>Cuối Học Kỳ 1</label>
-                                <input 
-                                    type='text' 
-                                    id='=sem1_subject1' 
-                                    className='form_score_subject_input' 
-                                    placeholder='10'
-                                    required />
-                            </div>
-
-                            {/* Half Semester 2 */}
-                            <div className='score_input_card'>
-                                <label for="halfsem2_subject1" className='form_score_subject_label'>Giữa Học Kỳ 2</label>
-                                <input 
-                                    type='text' 
-                                    id='=halfsem2_subject1' 
-                                    className='form_score_subject_input' 
-                                    placeholder='8.5'
-                                    required />
-                            </div>
-                        </div>
-
-                        {/* Subject 2 card */}
-                        <div className='form_subject_card'>
-                            <div className='subject_card_title'>Môn học 2</div>
-                            <label for="subject2" className='form_subject_label'>Tên môn học:</label>
-                            <input 
-                                type='text' 
-                                id='subject2' 
-                                className='form_subject_input' 
-                                placeholder='Văn'
-                                required />
-                        </div>
-
-                        {/* Subject 2 scores container */}
-                        <div className='form_score_inputs_container'>
-                            {/* Half Semester 2 */}
-                            <div className='score_input_card'>
-                                <label for="halfsem1_subject2" className='form_score_subject_label'>Giữa Học Kỳ 1</label>
-                                <input 
-                                    type='text' 
-                                    id='=halfsem1_subject2' 
-                                    className='form_score_subject_input' 
-                                    placeholder='7.5'
-                                    required />
-                            </div>
-
-                            {/* End Semester 1 */}
-                            <div className='score_input_card'>
-                                <label for="sem1_subject2" className='form_score_subject_label'>Cuối Học Kỳ 1</label>
-                                <input 
-                                    type='text' 
-                                    id='=sem1_subject2' 
-                                    className='form_score_subject_input' 
-                                    placeholder='8.25'
-                                    required />
-                            </div>
-
-                            {/* Half Semester 2 */}
-                            <div className='score_input_card'>
-                                <label for="halfsem2_subject2" className='form_score_subject_label'>Giữa Học Kỳ 2</label>
-                                <input 
-                                    type='text' 
-                                    id='=halfsem2_subject2' 
-                                    className='form_score_subject_input' 
-                                    placeholder='10'
-                                    required />
-                            </div>
-                        </div>
-
-                        {/* Subject 3 card */}
-                        <div className='form_subject_card'>
-                            <div className='subject_card_title'>Môn học 3</div>
-                            <label for="subject3" className='form_subject_label'>Tên môn học:</label>
-                            <input 
-                                type='text' 
-                                id='subject3' 
-                                className='form_subject_input' 
-                                placeholder='Anh'
-                                required />
-                        </div>
-
-                        {/* Subject 3 scores container */}
-                        <div className='form_score_inputs_container'>
-                            {/* Half Semester 1 */}
-                            <div className='score_input_card'>
-                                <label for="halfsem1_subject3" className='form_score_subject_label'>Giữa Học Kỳ 1</label>
-                                <input 
-                                    type='text' 
-                                    id='=halfsem1_subject3' 
-                                    className='form_score_subject_input' 
-                                    placeholder='8'
-                                    required />
-                            </div>
-
-                            {/* End Semester 1 */}
-                            <div className='score_input_card'>
-                                <label for="sem1_subject3" className='form_score_subject_label'>Cuối Học Kỳ 1</label>
-                                <input 
-                                    type='text' 
-                                    id='=sem1_subject3' 
-                                    className='form_score_subject_input' 
-                                    placeholder='8.75'
-                                    required />
-                            </div>
-
-                            {/* Half Semester 2 */}
-                            <div className='score_input_card'>
-                                <label for="halfsem2_subject3" className='form_score_subject_label'>Giữa Học Kỳ 2</label>
-                                <input 
-                                    type='text' 
-                                    id='=halfsem2_subject3' 
-                                    className='form_score_subject_input' 
-                                    placeholder='8.5'
-                                    required />
-                            </div>
-                        </div>
-
-                        {/* Subject 4 card */}
-                        <div className='form_subject_card'>
-                            <div className='subject_card_title'>Môn học 4</div>
-                            <label for="subject4" className='form_subject_label'>Tên môn học:</label>
-                            <input 
-                                type='text' 
-                                id='subject4' 
-                                className='form_subject_input' 
-                                placeholder='Địa'
-                                required />
-                        </div>
-
-                        {/* Subject 4 scores container */}
-                        <div className='form_score_inputs_container'>
-                            {/* Half Semester 1 */}
-                            <div className='score_input_card'>
-                                <label for="halfsem1_subject4" className='form_score_subject_label'>Giữa Học Kỳ 1</label>
-                                <input 
-                                    type='text' 
-                                    id='=halfsem1_subject4' 
-                                    className='form_score_subject_input' 
-                                    placeholder='9'
-                                    required />
-                            </div>
-
-                            {/* End Semester 1 */}
-                            <div className='score_input_card'>
-                                <label for="sem1_subject4" className='form_score_subject_label'>Cuối Học Kỳ 1</label>
-                                <input 
-                                    type='text' 
-                                    id='=sem1_subject4' 
-                                    className='form_score_subject_input' 
-                                    placeholder='9.5'
-                                    required />
-                            </div>
-
-                            {/* Half Semester 2 */}
-                            <div className='score_input_card'>
-                                <label for="halfsem2_subject4" className='form_score_subject_label'>Giữa Học Kỳ 2</label>
-                                <input 
-                                    type='text' 
-                                    id='=halfsem2_subject4' 
-                                    className='form_score_subject_input' 
-                                    placeholder='8.5'
-                                    required />
-                            </div>
-                        </div>
-                    </div>
-                </form>
-            </div>
+==============================
+Required Packages
+==============================
+react-router-dom
+classnames
+axios
+chart.js
+react-chartjs-2
+react-markdown
+tailwindcss 
+@tailwindcss/vite

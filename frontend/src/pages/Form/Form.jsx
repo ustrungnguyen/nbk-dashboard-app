@@ -67,6 +67,7 @@ export default function Form() {
 
         const response = await axios.post('http://localhost:8000/analyze', {
             subjects: formarttedSubjects,
+            description: description,
         });
 
         navigate('/dashboard', {state: {results: response.data}});
@@ -147,7 +148,7 @@ export default function Form() {
                     {error && <p className="form_error">{error}</p>}
 
                     <button to="/dashboard" type="submit" className='form_submit_button' disabled={isLoading}>
-                        {isLoading ? 'Đang tải dữ liệu...' : 'Phân tích'}
+                        {isLoading ? 'Đang phân tích...' : 'Phân tích'}
                     </button>
                 </form>
             </div>
