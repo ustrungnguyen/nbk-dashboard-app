@@ -45,9 +45,9 @@ History Sample Data (JSON)
     {
       "name": "Toán",
       "scores": [
-        9.0,
-        8.5,
-        9.5
+        7,
+        9.75,
+        9
       ]
     },
     {
@@ -61,8 +61,8 @@ History Sample Data (JSON)
     {
       "name": "Tiếng Anh",
       "scores": [
-        6.0,
-        5.5,
+        6.75,
+        5.0,
         6.5
       ]
     },

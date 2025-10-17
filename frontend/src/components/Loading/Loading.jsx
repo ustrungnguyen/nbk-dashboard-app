@@ -1,7 +1,7 @@
 import React from 'react';
 import './loading.css';
 
-export default function LoadingAI() {
+export default function Loading() {
     return (
         <div className="ai-preloader">
             <p>Đang tải dữ liệu...</p>

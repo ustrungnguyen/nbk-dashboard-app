@@ -62,36 +62,60 @@ def generate_ai_analysis(data: dict) -> str:
         ])
         
         prompt = f"""
-            Bạn là một chuyên gia tư vấn học tập với nhiều năm kinh nghiệm, chuyên giúp đỡ mọi người
-            trong việc đánh giá, phân tích, và từ đó đưa ra một lộ trình học tập chi tiết để đạt được
-            mục tiêu trong việc học tập. Dựa vào dữ liệu điểm số và mô tả của học sinh dưới đây, hãy 
-            đưa ra một bài phân tích chi tiết bằng tiếng Việt với câu trúc 3 phần chính bao gồm 3 phần chính:
-            '### Đánh giá sơ bộ',
-            '### Phân tích chi tiết',
-            '### Lộ trình đề xuất'.
-            
-            Đầu tiên tôi sẽ cung cấp một số dữ liệu cần thiết trong quá trình học tập.
-            **Dữ liệu học tập:**
-            {subject_details}
-            - Trạng thái tổng quan: {data['overall_status']}
-            - Khả năng đỗ tốt nghiệp (dự đoán): {data['graduation_possibility']}
+            Bạn là một chuyên gia tư vấn học tập giàu kinh nghiệm, chuyên đánh giá kết quả học tập và đưa 
+            ra lộ trình cải thiện cá nhân hóa cho từng học sinh. 
+            Dưới đây là toàn bộ dữ liệu học tập của một học sinh:
 
-            Ngoài ra, tôi cũng sẽ cung cấp một mô tả chi tiết về quá trình học tập
-            **Mô tả của học sinh:**
+            ### Dữ liệu điểm số:
+            {chr(10).join([f"- {s['subject_name']}: điểm gốc = {', '.join(map(str, s['original_scores']))}, điểm dự đoán = {s['predicted_score']}, trạng thái: {s['status']}" for s in data['subject_analysis']])}
+
+            - Trạng thái tổng quan: {data['overall_status']}
+            - Khả năng đỗ tốt nghiệp (ước tính): {data['graduation_possibility']}
+
+            ### Mô tả học sinh:
             "{data['user_description']}"
-            
-            Hãy đưa ra những nhận xét sâu sắc, mang tính xây dựng và một lộ trình học tập thực tế, khả thi để 
-            giúp học sinh cải thiện hoặc duy trì kết quả. Cuối cùng đừng quên đưa ra một lộ trình học tập chi 
-            tiết để đạt được điểm. Bạn hãy trả lời dài và thật chi tiết nhé!
+
+            ---
+
+            Hãy viết một **phân tích chi tiết bằng tiếng Việt** với 3 phần rõ ràng:
+
+            ### Đánh giá sơ bộ:
+            Đưa ra cái nhìn tổng quan, đánh giá điểm mạnh, điểm yếu nổi bật nhất, và tình hình học tập hiện tại.
+
+            ### Phân tích chi tiết:
+            Phân tích từng môn học một cách logic và có chiều sâu (nêu rõ nguyên nhân của kết quả hiện tại, 
+            cách tư duy của học sinh, và yếu tố ảnh hưởng). 
+            Dùng các bullet points để trình bày rõ ràng.
+
+            ### Lộ trình đề xuất:
+            Đưa ra hướng dẫn học tập cụ thể cho từng môn (đặc biệt tập trung vào các môn yếu hoặc nguy hiểm).
+            Đồng thời cũng phải chú ý và chỉ ra được những môn đang học tốt, có điểm cao để đưa ra một lời 
+            khen ngợi đáng có.
+            Gợi ý cách học, công cụ, thời gian biểu hoặc phương pháp học phù hợp, cũng như những môn học
+            cụ thể cần chú ý (Ví dụ như cần cải thiệt môn A, duy trì kết quả cao của môn B).
+            Cần trình bày như một bản kế hoạch thực tế, có thể áp dụng ngay.
+
+            Cuối cùng, tổng kết bằng một đoạn khích lệ ngắn mang tính động viên và tạo cảm hứng cho học sinh.
+
+            Trả lời thật tự nhiên, có chiều sâu, và đủ dài (ít nhất 5-6 đoạn).
+            Viết với giọng văn chuyên nghiệp, thân thiện, truyền cảm hứng. 
+            Mỗi phần nên có độ dài ít nhất 3 đoạn văn, mỗi đoạn 3-5 câu.
+            Nếu cần, có thể sử dụng dấu gạch đầu dòng để trình bày dễ đọc hơn.
+            Cố gắng viết sao cho bài phân tích dài, sâu và có tính thực tế cao.
+
         """
         
+        # GPT Model Configuration
         response = client.chat.completions.create(
-            model="gpt-3.5-turbo",
+            model="gpt-4-turbo",
+            temperature=0.85,
+            max_tokens=1500,
+            presence_penalty=0.3,
+            frequency_penalty=0.1,
             messages=[
-                {"role": "system", "content": "You are a helpful academic advisor."},
+                {"role": "system", "content": "You are an experienced academic advisor who writes detailed Vietnamese educational analyses that are realistic, motivational, and personalized."},
                 {"role": "user", "content": prompt}
-            ],
-            temperature=0.5,
+            ]
         )
         
         return response.choices[0].message.content.strip()
