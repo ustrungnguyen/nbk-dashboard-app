@@ -8,7 +8,7 @@ import useInView from '../../custom_hooks/useInView';
 import cn from 'classnames';
 
 // Importing Images
-import WelcomeImage from '../../assets/Home/react.png';
+import WelcomeImage from '../../assets/Home/welcome.png';
 import DashboardImage from '../../assets/Home/DashboardConner.png';
 
 // Importing CSS
