@@ -28,7 +28,10 @@ Lib/site-packages
 __pycache__/
 
 ._*
-.env*
+.env
+.env.local
+.env.development
+.env.production
 
 venv/
 .venv/
