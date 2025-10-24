@@ -22,7 +22,7 @@ export default function App() {
           {/* Header */}
           <Header />
 
-          {/* Routers */}
+          {/* Routes */}
           <main>
               <Routes>
                 <Route path='/' element={<Home />} />
