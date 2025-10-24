@@ -109,7 +109,7 @@ def generate_ai_analysis(data: dict) -> str:
         response = client.chat.completions.create(
             model="gpt-4-turbo",
             temperature=0.85,
-            max_tokens=3000,
+            max_tokens=1500,
             presence_penalty=0.3,
             frequency_penalty=0.1,
             messages=[

@@ -61,9 +61,9 @@ History Sample Data (JSON)
     {
       "name": "Tiếng Anh",
       "scores": [
-        6.75,
-        5.0,
-        6.5
+        7.75,
+        9.0,
+        3
       ]
     },
     {
