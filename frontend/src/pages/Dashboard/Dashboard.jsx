@@ -75,7 +75,7 @@ export default function Dashboard() {
             } else {
             clearInterval(typing);
             }
-        }, 20);
+        }, 10);
 
         const blink = setInterval(() => setCursorVisible(v => !v), 500);
 
