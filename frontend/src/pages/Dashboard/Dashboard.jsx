@@ -25,7 +25,6 @@ export default function Dashboard() {
 
     const location = useLocation();
     const analysisData = location.state?.results;
-    
     const [aiRef, inView] = useInView({ threshold: 0.1 });
     const [isThinking, setIsThinking] = useState(false);
     const [showResponse, setShowResponse] = useState(false);
@@ -75,7 +74,7 @@ export default function Dashboard() {
             } else {
             clearInterval(typing);
             }
-        }, 20);
+        }, 10);
 
         const blink = setInterval(() => setCursorVisible(v => !v), 500);
 
