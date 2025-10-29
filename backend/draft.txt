@@ -38,7 +38,7 @@ Sample Form
 -----------------------------------------------------------------------------
 
 ==============================
-History Sample Data (JSON)
+Informatics Sample Data (JSON)
 ==============================
 {
   "subjects": [
@@ -67,7 +67,7 @@ History Sample Data (JSON)
       ]
     },
     {
-      "name": "Lịch Sử",
+      "name": "Tin Học",
       "scores": [
         2.0,
         3.25,
@@ -76,8 +76,83 @@ History Sample Data (JSON)
     }
   ],
   "description": "
-        Trong thời gian vừa qua, tôi cảm thấy khá tự tin với các môn tính toán và phân tích như Toán và Văn. Tôi có thể nắm bắt logic và áp dụng vào bài tập khá tốt. Tuy nhiên, với môn Tiếng Anh, tôi gặp một chút khó khăn về từ vựng và các cấu trúc ngữ pháp phức tạp, đặc biệt là với kĩ năng nói, tôi rất kém ở kĩ năng nói bởi ít khi có cơ hội giao tiếp bằng Tiếng Anh và cũng thiếu chủ động trong việc tìm ra giải pháp hợp lí, 1 tuần tôi đi học thêm 2 buổi Tiếng Anh, nhưng mỗi buổi học thêm đó tôi chỉ có thể nói khoảng 1 tiếng do cần phải học những kỹ năng khác, nên thời gian tôi dành cho việc luyện tập Speaking rất ít. Riêng môn Lịch Sử là môn tôi yếu nhất, tôi thực sự chật vật trong việc ghi nhớ các mốc thời gian và sự kiện, đặc biệt là trong chương trình học của tôi yêu cầu ghi nhớ rất nhiều sự kiện và các mốc thời gian của nhiều quốc gia khác nhau ví dụ như chiến tranh lạnh giữa Hoa Kỳ và Liên Xô. Cùng với đó thì tôi cũng có một điểm yếu rất nặng trong việc học thuộc lòng, tôi có thể dễ dàng xử lý logic của các bài toán nhưng thật sự không thể nào học thuộc lòng nổi 1 sự kiện lịch sử nào, dẫn đến kết quả không được như mong đợi, ngược lại điểm số môn Lịch Sử của tôi còn ở mức được cảnh báo rằng có thể trượt tốt nghiệp khiến tôi rất lo lắng.
+        Trong thời gian vừa qua, tôi cảm thấy khá tự tin với các môn có tính tư duy và phân tích như Toán và Văn. Hai môn này giúp tôi phát huy thế mạnh về khả năng suy luận logic, ghi nhớ có hệ thống và tính kỷ luật trong quá trình học. Ở môn Toán, tôi luôn có thói quen xem lại lỗi sai sau mỗi bài kiểm tra để tìm hiểu nguyên nhân, và điều đó giúp tôi tiến bộ nhanh hơn. Mỗi khi gặp bài toán khó, tôi coi đó là cơ hội để rèn tư duy chứ không phải áp lực. Tôi thường ghi chú lại các dạng bài đặc biệt, lập bảng so sánh các công thức tương tự, từ đó tránh nhầm lẫn trong các đề thi có tính đánh đố cao. Ngoài ra, tôi còn tham gia các nhóm học Toán trực tuyến để học hỏi thêm phương pháp giải khác nhau, điều này giúp tôi tự tin hơn rất nhiều trong những kỳ thi gần đây. Có thể nói, Toán là môn giúp tôi duy trì tinh thần học tập bền bỉ và tạo cảm giác tự hào nhất. Môn Văn thì lại mang đến cho tôi một trải nghiệm khác hẳn — không còn là việc ghi nhớ máy móc như thời cấp hai, mà là khả năng cảm nhận và biểu đạt cảm xúc bằng ngôn ngữ của chính mình. Tôi bắt đầu luyện viết theo cách tự nhiên hơn, không còn sao chép bài mẫu. Mỗi khi đọc một tác phẩm, tôi cố gắng hiểu được tâm trạng của nhân vật, bối cảnh xã hội và thông điệp mà tác giả muốn gửi gắm. Sau đó, tôi ghi lại cảm nhận của riêng mình, dù đôi khi vẫn chưa mạch lạc, nhưng tôi cảm thấy thật hơn. Tôi cũng thường xuyên nhờ cô giáo sửa bài và phân tích cách diễn đạt, nhờ vậy văn phong của tôi đã tiến bộ rõ rệt. Tuy đôi lúc tôi vẫn gặp khó khăn trong việc lập luận cho phần nghị luận xã hội, nhưng tôi tin rằng nếu duy trì được thói quen luyện viết đều đặn, tôi có thể đạt mục tiêu điểm 8 hoặc hơn trong kỳ thi tốt nghiệp. Còn với môn Tiếng Anh, tôi đang gặp khá nhiều vấn đề, đặc biệt là kỹ năng Speaking và Listening. Tôi hiểu cấu trúc ngữ pháp, nhưng khi nói hoặc nghe thực tế thì rất dễ rối. Tôi đi học thêm 2 buổi mỗi tuần, tuy nhiên phần lớn thời gian lại dành cho ngữ pháp và từ vựng, chỉ có khoảng 1 tiếng để luyện nói. Vì vậy, khả năng phản xạ của tôi vẫn chậm, thậm chí khi nói tôi thường bị thiếu tự tin, sợ sai phát âm hoặc ngữ pháp. Tôi nhận ra vấn đề lớn nhất của mình là không có môi trường sử dụng tiếng Anh thực tế. Tôi đã thử xem phim có phụ đề tiếng Anh, đọc sách song ngữ, và dùng app học nói, nhưng việc duy trì thói quen đều đặn thật sự không dễ. Tôi nghĩ mình cần thay đổi phương pháp học — có thể tham gia câu lạc bộ tiếng Anh hoặc tìm bạn nói online. Tôi thật sự muốn khắc phục điểm yếu này vì Tiếng Anh không chỉ quan trọng cho kỳ thi mà còn cần thiết cho tương lai nghề nghiệp của tôi. Tuy nhiên, môn khiến tôi lo lắng nhất là Tin Học. Tôi thực sự gặp rất nhiều khó khăn trong môn này. Không giống như Toán hay Văn, nơi tôi có thể tự học qua sách vở, Tin Học yêu cầu nhiều thực hành và khả năng ghi nhớ chi tiết về các công cụ và cú pháp. Trong chương trình học, chúng tôi phải nắm được nhiều lĩnh vực như Tin học văn phòng, Excel, PowerPoint, MOS, và cả những kiến thức lập trình cơ bản. Tôi nhận ra mình thường xuyên bị rối giữa các hàm trong Excel, đôi khi chỉ cần quên một ký tự nhỏ cũng khiến kết quả sai hoàn toàn. Khi học PowerPoint, tôi mất rất nhiều thời gian để căn chỉnh, thiết kế slide mà vẫn không đạt yêu cầu thẩm mỹ của cô giáo. Còn phần lập trình thì lại càng khó hơn nữa — tôi hiểu được logic cơ bản nhưng khi viết mã, tôi rất dễ nhầm lẫn cú pháp, đặc biệt là khi phải kết hợp nhiều câu lệnh cùng lúc. Tôi đã thử xem video hướng dẫn và đọc tài liệu, nhưng càng học càng thấy rối, giống như mình đang cố nhớ từng mảnh rời rạc mà không hiểu tổng thể. Nhiều khi tôi cảm thấy tự ti vì dù dành nhiều thời gian cho môn Tin Học nhưng điểm số vẫn rất thấp. Mỗi lần thấy kết quả kiểm tra, tôi thật sự chán nản và mất niềm tin vào khả năng của bản thân. Tôi biết mình không thể tiếp tục học theo kiểu thụ động như hiện nay nữa. Có lẽ tôi cần một người hướng dẫn hoặc một phương pháp thực hành phù hợp hơn, ví dụ như học qua các bài tập dự án nhỏ hoặc thực tế hơn thay vì chỉ ghi nhớ lý thuyết khô khan. Tôi cũng đang cố gắng luyện tập thêm kỹ năng gõ phím và làm quen với các phần mềm phổ biến để không còn bị bỡ ngỡ khi thực hành. Nhìn chung, tôi đang ở giai đoạn mà bản thân vừa có động lực, vừa có lo lắng. Tôi tin rằng với sự hỗ trợ và định hướng học tập đúng đắn, tôi có thể phát huy tốt thế mạnh của mình ở các môn Toán và Văn, đồng thời cải thiện đáng kể hai môn yếu là Tiếng Anh và Tin Học. Tôi không muốn chỉ vượt qua kỳ thi tốt nghiệp mà còn muốn cảm thấy tự hào vì những nỗ lực thật sự của bản thân trong suốt quá trình học
     "
+}
+
+==============================
+All Good Sample Data (JSON)
+==============================
+{
+  "subjects": [
+    {
+      "name": "Toán",
+      "scores": [9.0, 8.5, 9.5]
+    },
+    {
+      "name": "Văn",
+      "scores": [8.5, 9.0, 8.5]
+    },
+    {
+      "name": "Vật Lý",
+      "scores": [9.5, 9.0, 9.0]
+    },
+    {
+      "name": "Địa Lý",
+      "scores": [8.0, 8.0, 8.5]
+    }
+  ],
+  "description": "
+    Trong suốt quá trình học vừa qua, em luôn cố gắng duy trì sự cân bằng giữa các môn học, đặc biệt là giữa khối tự nhiên và xã hội. Em xem việc học không chỉ là để đạt điểm cao, mà còn là cơ hội để rèn luyện tư duy và cách nhìn nhận vấn đề trong cuộc sống. Mỗi môn học đều mang đến cho em một góc nhìn khác nhau — Toán giúp em rèn sự chính xác và kiên nhẫn, Văn giúp em học cách cảm nhận và biểu đạt, Vật Lý dạy em hiểu được bản chất của hiện tượng tự nhiên, còn Địa Lý giúp em mở rộng nhận thức về thế giới xung quanh.
+    
+    Với môn Toán, em luôn dành sự ưu tiên hàng đầu vì đây là môn em yêu thích nhất. Em thường xuyên luyện đề, đặc biệt là các bài nâng cao liên quan đến xác suất, tích phân và hàm số. Em nhận ra rằng để đạt điểm cao trong Toán không chỉ cần hiểu công thức mà quan trọng hơn là phải biết cách vận dụng chúng một cách linh hoạt. Em có thói quen tự giải lại đề nhiều lần, mỗi lần lại thử một phương pháp khác nhau để rút ra cách tối ưu nhất. Mỗi khi sai, em đều xem lại thật kỹ, cố gắng hiểu bản chất thay vì chỉ học thuộc lời giải. Nhờ đó, em dần hình thành phản xạ làm bài nhanh và chính xác hơn. Tuy nhiên, em vẫn thấy mình cần cải thiện khả năng quản lý thời gian trong phòng thi, vì đôi khi em dành quá lâu cho một câu khó mà chưa chắc đã đạt điểm tối đa.
+    
+    Môn Văn đối với em là một thử thách thú vị. Trước đây em không thật sự tự tin trong việc diễn đạt ý tưởng, nhưng nhờ chăm chỉ luyện viết và đọc thêm các bài mẫu, em đã tiến bộ đáng kể. Em học được rằng Văn không chỉ là thuộc lòng, mà là sự đồng cảm với tác phẩm. Khi học, em thường cố gắng hiểu sâu tâm lý nhân vật, bối cảnh lịch sử, rồi tự đặt câu hỏi: \"Nếu mình là nhân vật này, mình sẽ làm gì?\". Cách học này khiến em cảm thấy gần gũi hơn với môn Văn và dễ dàng ghi nhớ nội dung hơn. Tuy nhiên, điểm yếu của em vẫn là phần nghị luận xã hội, nơi em đôi khi chưa đủ mạnh mẽ trong lập luận và dẫn chứng. Em đang cố gắng cải thiện bằng cách đọc thêm báo, bài viết thời sự, để có thêm vốn sống khi làm bài. Em hy vọng trong kỳ thi tới, mình có thể thể hiện tốt hơn khả năng viết mở rộng và sáng tạo.
+    
+    Ở môn Vật Lý, em cảm thấy khá tự tin. Đây là môn giúp em phát huy tối đa khả năng tư duy logic và tính cẩn thận trong từng phép tính. Em rất thích tìm hiểu mối liên hệ giữa công thức và hiện tượng thực tế — chẳng hạn, khi học về dao động điều hòa hay điện xoay chiều, em thường tự làm các thí nghiệm nhỏ để hiểu bản chất thay vì chỉ học lý thuyết khô khan. Em cũng hay trao đổi bài với bạn bè, đặc biệt trong phần bài tập chương khó như cảm ứng điện từ hoặc quang học. Tuy nhiên, đôi lúc em vẫn gặp rắc rối trong việc trình bày lời giải, đặc biệt là khi đề yêu cầu lập luận chi tiết thay vì chỉ ra kết quả cuối cùng. Em nghĩ mình cần luyện viết lời giải gọn gàng và có hệ thống hơn để tránh mất điểm đáng tiếc.
+    
+    Riêng môn Địa Lý, ban đầu em từng xem nhẹ vì nghĩ rằng chỉ cần học thuộc lòng là được. Nhưng sau một thời gian, em nhận ra môn này cũng đòi hỏi khả năng tư duy và liên kết kiến thức giữa các khu vực, các yếu tố tự nhiên – kinh tế – xã hội. Em bắt đầu học bằng cách vẽ sơ đồ tư duy, chia nhỏ nội dung thành từng mảng như khí hậu, dân cư, tài nguyên, rồi kết nối chúng với nhau. Cách này giúp em ghi nhớ lâu hơn và hiểu bản chất của các vấn đề địa lý hiện đại, như biến đổi khí hậu hay phân bố dân cư. Em còn rèn thêm kỹ năng đọc biểu đồ và bản đồ, vì đây là phần chiếm điểm khá lớn trong bài thi. Mặc dù kết quả đã ổn định, em vẫn muốn nâng cao thêm kỹ năng phân tích số liệu để bài làm thêm sắc bén.
+    
+    Tổng kết lại, điểm số của em hiện đang ở mức an toàn, nhưng em vẫn không muốn dừng lại ở đó. Em hiểu rằng để đạt được ngưỡng điểm 9.5-10, điều quan trọng không chỉ là học chăm, mà là học đúng cách. Em đang đặt ra cho mình mục tiêu rõ ràng cho giai đoạn nước rút — luyện đề thường xuyên hơn, làm quen với áp lực thời gian thi, và giữ cho tinh thần thật ổn định. Em mong nhận được một lời khuyên chi tiết về chiến lược ôn tập cuối cùng: làm sao để biến những điểm mạnh hiện có thành lợi thế tuyệt đối, và khắc phục những điểm yếu nhỏ còn sót lại. Em tin rằng nếu tiếp tục giữ được sự tập trung và tinh thần cầu tiến như hiện nay, em hoàn toàn có thể bứt phá để đạt kết quả xuất sắc trong kỳ thi tốt nghiệp sắp tới."
+}
+
+
+==============================
+Bad Sample Data (JSON)
+==============================
+{
+  "subjects": [
+    {
+      "name": "Toán",
+      "scores": [3.0, 2.5, 3.0]
+    },
+    {
+      "name": "Văn",
+      "scores": [4.0, 3.0, 2.0]
+    },
+    {
+      "name": "Sinh Học",
+      "scores": [5.0, 4.5, 5.0]
+    },
+    {
+      "name": "Hoá Học",
+      "scores": [3.5, 2.0, 4.0]
+    }
+  ],
+  "description": "
+    Em thật sự không biết phải bắt đầu từ đâu nữa. Dạo gần đây, mỗi khi nhìn vào bảng điểm của mình, em chỉ muốn tránh né mọi thứ. Em đã cố gắng rồi, cố gắng rất nhiều, nhưng kết quả vẫn chẳng đi đến đâu. Em học, em ghi chép đầy đủ, em còn thử thay đổi cách học, xem lại video, đọc tài liệu, nhưng càng học em càng thấy rối. Mọi thứ cứ như một mớ hỗn độn trong đầu, em không biết phải bắt đầu từ đâu và kết thúc thế nào.
+    
+    Môn Toán là nỗi ám ảnh lớn nhất của em. Mỗi khi ngồi trước bài tập, dù là dạng cơ bản, em cũng mất hàng giờ mà vẫn không ra được đáp án. Em đọc lại công thức, làm lại ví dụ, nhưng vào bài mới thì lại quên sạch. Cảm giác như đầu óc em trống rỗng, chẳng thể liên kết nổi kiến thức. Em thấy sợ khi phải làm bài kiểm tra, vì em biết kết quả sẽ chẳng tốt hơn lần trước. Có lúc em nghĩ hay là mình không hợp với các con số, nhưng rồi lại thấy buồn, vì Toán là môn bắt buộc, em không thể trốn tránh nó mãi được.
+    
+    Với môn Văn, em từng nghĩ mình có thể khá hơn, vì ít ra em có thể viết được đôi dòng cảm nhận. Nhưng dạo gần đây, em cảm thấy không còn động lực. Khi đọc một bài văn hay một đoạn thơ, em không cảm nhận được gì nữa. Em viết như một cái máy, chỉ cố gắng điền đủ ý để không bị điểm liệt. Mỗi lần nhận lại bài làm, thấy số điểm thấp hơn mong đợi, em cảm giác như mình đang ngày càng rời xa cái gọi là \"học tốt\". Em biết Văn là môn cần cảm xúc và sự kiên trì, nhưng chính sự thất vọng trong lòng khiến em càng khó tập trung hơn.
+    
+    Môn Hoá Học thì thật sự là một chuỗi thất bại nối tiếp nhau. Em cố ghi nhớ phương trình phản ứng, nhưng chỉ cần qua vài ngày là em lại quên sạch. Những công thức, ký hiệu, cân bằng phương trình khiến em choáng ngợp. Dù đã cố gắng làm lại bài tập nhiều lần, nhưng sai vẫn cứ sai. Em từng tự nhủ rằng chỉ cần kiên trì thì sẽ khá hơn, nhưng càng cố gắng, em càng thấy mình lạc lối. Em thậm chí bắt đầu thấy sợ mỗi khi đến tiết Hoá, vì em biết mình chẳng thể theo kịp các bạn khác.
+    
+    Môn Sinh Học thì có khá hơn đôi chút, ít nhất em còn hiểu được phần nào bản chất của bài học. Nhưng dù có cố gắng bao nhiêu, điểm số của em vẫn chỉ ở mức trung bình yếu. Em đọc đi đọc lại sách giáo khoa, xem video giảng, nhưng đến khi làm bài trắc nghiệm, em vẫn bị nhầm giữa các khái niệm. Có lẽ em chỉ đang cố gắng để không bị rớt môn, chứ chưa thật sự hiểu sâu vấn đề.
+    
+    Điều khiến em mệt mỏi nhất không chỉ là điểm thấp, mà là cảm giác bất lực khi nhìn người khác tiến bộ còn mình thì giậm chân tại chỗ. Em thấy ghen tị, thấy tủi thân, và rồi lại thấy tự trách bản thân. Em tự hỏi không biết mình đã làm sai ở đâu. Mỗi khi về nhà, em không dám nhìn vào ánh mắt kỳ vọng của bố mẹ. Em biết họ buồn, nhưng em cũng không biết phải làm gì khác. Có lúc em nghĩ hay là bỏ luôn, nhưng rồi lại sợ tương lai của mình sẽ tệ hơn nữa.
+    
+    Em cảm thấy mình đang mất phương hướng. Em không còn biết học để làm gì, và học thế nào mới đúng. Em không tìm được động lực để bắt đầu lại. Dù vậy, sâu trong lòng em vẫn có một phần nhỏ không muốn từ bỏ — chỉ là em không biết bắt đầu từ đâu. Em mong có ai đó chỉ cho em một con đường rõ ràng, một cách để em có thể học lại từ đầu, để không còn phải sợ hãi khi nghe đến hai chữ \"bài kiểm tra\" nữa."
 }
 
 ==============================
@@ -89,5 +164,3 @@ axios
 chart.js
 react-chartjs-2
 react-markdown
-tailwindcss 
-@tailwindcss/vite
