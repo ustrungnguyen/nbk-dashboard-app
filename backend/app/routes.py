@@ -7,7 +7,8 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-client = OpenAI(api_key = os.getenv("OPENAI_API_KEY"))
+client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+print("API Key loaded:", os.getenv("OPENAI_API_KEY")[:10], "...")
 
 router = APIRouter()
 
@@ -77,41 +78,60 @@ def generate_ai_analysis(data: dict) -> str:
 
             ---
 
-            Hãy viết một **phân tích chi tiết bằng tiếng Việt** với 3 phần rõ ràng:
+            ### YÊU CẦU VỀ KẾT QUẢ PHÂN TÍCH:
+            Viết một **bản đánh giá học tập cực kỳ chi tiết bằng tiếng Việt**, độ dài **tối thiểu 3000-3500 từ**, xưng hô bằng 'bạn', 'mình' và gồm 3 phần lớn:
+và
+            #### 🟢 1. ĐÁNH GIÁ SƠ BỘ:
+            - Viết 5-8 đoạn văn mô tả cái nhìn tổng quan, điểm mạnh, điểm yếu, thái độ học tập và xu hướng phát triển của học sinh.
+            - Nêu ra ấn tượng chung về tinh thần học tập, khả năng tư duy, điểm cần cải thiện.
+            - Khích lệ lại điểm mạnh và chỉ thẳng điểm yếu của học sinh đó.
 
-            ### Đánh giá sơ bộ:
-            Đưa ra cái nhìn tổng quan, đánh giá điểm mạnh, điểm yếu nổi bật nhất, và tình hình học tập hiện tại.
+            #### 🟡 2. PHÂN TÍCH CHI TIẾT:
+            - Phân tích **từng môn học riêng biệt** theo cấu trúc:
+            - Điểm mạnh hiện tại.
+            - Vấn đề hoặc sai sót học tập.
+            - Nguyên nhân (tâm lý, phương pháp, môi trường).
+            - Gợi ý cách tiếp cận mới cho môn đó.
+            - Với mỗi môn, viết ít nhất 1 đoạn dài hoặc 5-10 bullet points phân tích thật kỹ.
+            - Nêu ra ít nhất 3 phòng đoán lý do vì sao học sinh lại có khả năng học mạnh ở môn này và yếu ở môn kia.
 
-            ### Phân tích chi tiết:
-            Phân tích từng môn học một cách logic và có chiều sâu (nêu rõ nguyên nhân của kết quả hiện tại, 
-            cách tư duy của học sinh, và yếu tố ảnh hưởng). 
-            Dùng các bullet points để trình bày rõ ràng.
-
-            ### Lộ trình đề xuất:
-            Đưa ra hướng dẫn học tập cụ thể cho từng môn (đặc biệt tập trung vào các môn yếu hoặc nguy hiểm).
-            Đồng thời cũng phải chú ý và chỉ ra được những môn đang học tốt, có điểm cao để đưa ra một lời 
-            khen ngợi đáng có.
-            Gợi ý cách học, công cụ, thời gian biểu hoặc phương pháp học phù hợp, cũng như những môn học
-            cụ thể cần chú ý (Ví dụ như cần cải thiệt môn A, duy trì kết quả cao của môn B).
-            Cần trình bày như một bản kế hoạch thực tế, có thể áp dụng ngay.
+            #### 🔵 3. LỘ TRÌNH HỌC TẬP CỤ THỂ:
+            - Viết **một kế hoạch học tập theo từng tuần trong 12 tuần tới**.
+            - Mỗi tuần cần có:
+            - 🎯 **Mục tiêu cụ thể (Goals)**: ví dụ “nắm vững công thức đạo hàm”, “đạt 8 điểm bài kiểm tra 15 phút”, “thuộc 50 từ vựng mới”.
+            - 🧭 **Nội dung học**: chi tiết từng ngày hoặc từng nhóm buổi học.
+            - ⏰ **Thời lượng gợi ý**: ví dụ “60 phút Toán mỗi buổi tối”, “2 buổi luyện nói tiếng Anh mỗi tuần”.
+            - 🧠 **Phương pháp & Công cụ hỗ trợ**: ví dụ “Pomodoro”, “Quizlet”, “Google Sheets theo dõi tiến độ”.
+            - ✅ **Cách đánh giá kết quả**: gợi ý bài kiểm tra, tự đánh giá, mini test, nhóm học.
+            - Lộ trình cần dài, cụ thể, khả thi, giống như một giáo án thực sự.
+            
+            ## 4. LỜI KHUYÊN SAU KHI KẾT THÚC LỘ TRÌNH ĐỀ XUẤT:
+            - Bạn phải nói rõ sau khi kết thúc lộ trình đề xuất mà vẫn còn thời gian ôn thi thì học sinh đó nên làm gì tiếp theo. Hãy viết một đoạn văn riêng để nói về phần này, 
+            đưa ra những lời khuyên nên chú tâm ôn vào môn nào, ví dụ nếu có một môn quá yếu thì phải đổ nhiều sự tập trung hơn vào ôn tập môn đó. Bạn cũng phải chỉ rõ các nguồn uy tín và cụ thể
+            để học sinh có thể học môn đó ngay và luôn chứ không phải mất thời gian đi tìm nguồn (Ví dụ YouTube). Mục đích của đoạn văn này để học sinh không lơ là sau khi kết thúc lộ trình mà vẫn
+            nhận được các gợi ý dài hạn cho bước tiếp theo.
 
             Cuối cùng, tổng kết bằng một đoạn khích lệ ngắn mang tính động viên và tạo cảm hứng cho học sinh.
 
-            Trả lời thật tự nhiên, có chiều sâu, và đủ dài (ít nhất 5-6 đoạn).
-            Viết với giọng văn chuyên nghiệp, thân thiện, truyền cảm hứng. 
-            Mỗi phần nên có độ dài ít nhất 3 đoạn văn, mỗi đoạn 3-5 câu.
-            Nếu cần, có thể sử dụng dấu gạch đầu dòng để trình bày dễ đọc hơn.
-            Cố gắng viết sao cho bài phân tích dài, sâu và có tính thực tế cao.
+            ---
+            ### PHONG CÁCH VIẾT:
+            - Viết **tự nhiên, sâu sắc, chuyên nghiệp và truyền cảm hứng.**
+            - Diễn đạt **như một cố vấn đang nói chuyện với học sinh thật**.
+            - Dùng **định dạng Markdown**: tiêu đề, bullet points, khoảng cách rõ ràng.
+            - Phần kết cần là một **đoạn động viên dài**, giúp học sinh có thêm niềm tin và ý chí học tập.
+            - Không được viết ngắn; nếu cần hãy mở rộng thêm ví dụ, lời khuyên, hoặc kế hoạch mở rộng dài hơi (3 tháng).
+            ---
+            ✳️ Hãy bắt đầu bài viết ngay sau đây:
 
         """
         
         # GPT Model Configuration
         response = client.chat.completions.create(
             model="gpt-4-turbo",
-            temperature=0.85,
+            temperature=0.9,
             max_tokens=3000,
-            presence_penalty=0.3,
-            frequency_penalty=0.1,
+            presence_penalty=0.5,
+            frequency_penalty=0.2,
             messages=[
                 {"role": "system", "content": "You are an experienced academic advisor who writes detailed Vietnamese educational analyses that are realistic, motivational, and personalized."},
                 {"role": "user", "content": prompt}
